@@ -267,12 +267,12 @@ async function init() {
             let state = $(this).find('.subtitle-btn i').hasClass("bi-card-text-strike");
             if(globalState === state) {
                 if(state) $(this).find('.subtitle-btn i').removeClass("bi-card-text-strike").addClass("bi-card-text").attr("title", "Subtitles enabled");
-                else $(this).find('.subtitle-btn i').removeClass("bi-card-text").addClass("bi-card-text-strike").attr("title", "Subtitles disabled");
+                else $(this).find('.subtitle-btn i').removeClass("bi-card-text").addClass("bi-card-text-strike").attr("title", "禁止字幕");
             }
         })
         window.main.invoke("videoAction", {action: "globalSubtitles", value: globalState});
         if(globalState) $('#subtitleBtn i').removeClass("bi-card-text-strike").addClass("bi-card-text").attr("title", "Subtitles enabled");
-        else $('#subtitleBtn i').removeClass("bi-card-text").addClass("bi-card-text-strike").attr("title", "Subtitles disabled");
+        else $('#subtitleBtn i').removeClass("bi-card-text").addClass("bi-card-text-strike").attr("title", "禁止字幕");
     })
 
     $('#downloadBtn').on('click', async () => {
@@ -356,7 +356,7 @@ async function init() {
         if(args.lock === true) {
             $('#add-url').attr("placeholder", args.placeholder).prop("disabled", true);
         } else {
-            $('#add-url').attr("placeholder", "Enter a video/playlist URL to add to the queue").prop("disabled", false);
+            $('#add-url').attr("placeholder", "添加视频/视频列表 URL 到视频队列中").prop("disabled", false);
         }
     })
 

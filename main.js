@@ -343,7 +343,7 @@ ipcMain.handle("downloadFolder", async () => {
   await dialog
     .showOpenDialog(win, {
       defaultPath: env.settings.downloadPath,
-      buttonLabel: "Set download location",
+      buttonLabel: "设置下载位置",
       properties: ["openDirectory", "createDirectory"],
     })
     .then((result) => {
