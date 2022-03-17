@@ -1,13 +1,12 @@
 {
   "name": "youtube-dl-gui",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "description": "Open Video Downloader",
   "main": "main.js",
   "scripts": {
     "start": "electron . --dev",
     "build": "electron-builder",
     "lint": "eslint {**/modules/**/*.js,/*.js} && eslint renderer/*.js",
-    "test": "jest --coverage",
     "quick-test": "jest && eslint {**/modules/**/*.js,/*.js} && eslint renderer/*.js"
   },
   "jest": {
@@ -32,9 +31,6 @@
     "jest": "^27.3.0"
   },
   "dependencies": {
-    "@sentry/electron": "^2.5.0",
-    "@sentry/node": "^5.27.6",
-    "@sentry/tracing": "^5.27.6",
     "adm-zip": "^0.5.9",
     "axios": "^0.21.4",
     "bootstrap": "^4.5.3",
